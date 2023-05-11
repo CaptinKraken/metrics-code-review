@@ -1,0 +1,73 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#metrics_results div {
+  cursor: pointer;
+}
+
+#metrics_results div:hover {
+  background-color: lightblue;
+}
+
+#metrics_results_outer {
+  position: fixed;
+  left: 5%;
+  top: 10%;
+  height: 430px;
+  width: 1010px;
+  z-index: 1200;
+  background: whitesmoke;
+  outline: 2px solid grey;
+}
+
+#metrics_results {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 24px;
+  bottom: 0px;
+  overflow: auto;
+}
+
+#metrics_results_close {
+  z-index: 100;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+
+table.metrics {
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+table.metrics tr th {
+  font-family: monospace;
+  font-size: 10pt;
+  background: lightblue;
+  border: 1px solid darkblue;
+}
+
+table.metrics tr td {
+  font-family: monospace;
+  font-size: 8pt;
+  border: 1px solid black;
+  background: white;
+  padding: 4px;
+}
+table.metrics tr td ~ td {
+  text-align: right;
+}

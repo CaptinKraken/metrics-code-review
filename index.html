@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="shortcut icon" type="image/ico" href="/src/assets/favicon.ico" />
+    <title>Solid App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div>
+      <div id="panel-metrics" class="inline-toggle-container">
+        <h1>Metrics</h1>
+        <table class="metrics">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Unit</th>
+              <th>Low</th>
+              <th>Avg</th>
+              <th>High</th>
+              <th>Std</th>
+            </tr>
+          </thead>
+          <tbody id="metrics_samples"></tbody>
+        </table>
+      </div>
+      <div class="lockout inline-toggle-container">
+        <div class="modal">
+          <span class="title">Metric Graphs</span>
+          <label for="metrics_results" class="cancel"
+            ><i class="fa fa-window-close fa-fw"></i></label
+          ><br />
+          <div>
+            <select id="metric_select">
+              <option value="none">None</option>
+              <option value="power">Power</option>
+              <option value="load">Load</option>
+              <option>Traffic</option>
+            </select>
+            <input id="history_range_hour" type="button" value="Hour" />
+            <input id="history_range_day" type="button" value="Day" />
+            <input id="history_range_week" type="button" value="Week" />
+            <input id="history_range_month" type="button" value="Month" />
+            <input id="history_range_year" type="button" value="Year" />
+            <hr />
+            From <input id="history_start_date" type="text" size="10" />
+            <input id="history_start_time" type="time" size="10" />
+            To <input id="history_end_date" type="text" size="10" />
+            <input id="history_end_time" type="time" size="10" />
+            <button id="history_end_now">Now</button>
+            <button id="metrics_display">Display</button>
+          </div>
+          <br />
+          <div id="metrics_graph">
+            <canvas id="chart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/src/index.tsx" type="module"></script>
+  </body>
+</html>
