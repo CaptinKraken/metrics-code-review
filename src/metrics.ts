@@ -1,7 +1,9 @@
 import { object } from './object';
 import pad from './pad';
 import REST from './rest';
+import Chart from 'chart.js/auto';
 import * as $ from 'jquery';
+
 
 const API = '/api';
 
@@ -95,7 +97,6 @@ const metrics = {
     )
       .then(function (res) {
         //		    let out = [];
-        $('#metrics_graph').text(res);
         if (res.length) {
           const config = {
             type: 'line',
@@ -210,7 +211,8 @@ const metrics = {
           // );
           // From Chart.min.js
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          // const chart = new Chart(ctx, config);
+          new Chart(document.getElementById('chart'), config);
+          // $('#metrics_graph').text(JSON.stringify(config));
         }
         $('#metrics_display').removeAttr('disabled');
       })

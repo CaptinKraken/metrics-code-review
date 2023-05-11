@@ -10,12 +10,13 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "jquery": "latest",
     "typescript": "^4.9.5",
     "vite": "^4.1.1",
-    "vite-plugin-solid": "^2.5.0",
-    "jquery": "latest"
+    "vite-plugin-solid": "^2.5.0"
   },
   "dependencies": {
+    "chart.js": "^4.3.0",
     "solid-js": "^1.6.10"
   }
 }
