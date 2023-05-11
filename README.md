@@ -1,3 +1,3 @@
 # metrics-code-review
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/metrics-code-review)
+[Edit on CodeSandbox](https://codesandbox.io/p/github/CaptinKraken/metrics-code-review/main)
